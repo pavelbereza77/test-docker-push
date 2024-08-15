@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+    bot:
+        image: "groosha/sample-bot-with-redis:latest"
+        restart: "unless-stopped"
+        environment:
+            - BOT_TOKEN=7169718142:AAHjbuXoVAJUgv6H1Loh3sw0qW_lh47BrmI
+            - REDIS_DSN=redis://redis_fsm
+        # альтернативный вариант (выберите что-то одно):
+        # env_file: ".env"
+
+    redis_fsm:
+        image: "redis:7"
+        restart: "unless-stopped"
+        healthcheck:
+            test: [ "CMD", "redis-cli","ping" ]
