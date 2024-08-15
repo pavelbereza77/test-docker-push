@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: groosha/sample-bot-with-redis:latest
+          tags: pavelbereza77/test-docker-push:latest
