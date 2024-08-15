@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: pavelbereza77/test-docker-push:latest
+          tags: pavelber77/test-docker-push:latest
